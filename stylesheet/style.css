@@ -11,7 +11,7 @@ a{
     color: inherit; /* or specify your desired color, e.g., color: #333; */
     text-decoration: none;}
 
-#hero-section{
+header{
     background: linear-gradient(-135deg, #4F7CAF 0%, #FFFFFF 60%, #FFFFFF 100%);
     height: 100vh;  /* Full viewport height */
     width: 100%;
@@ -976,14 +976,14 @@ margin-top: 0px;}
     font-weight: 600;}
 
 #nineth-section-center-right-text{
-    font-family: "Poppins", sans-serif;
+    font-family: "general sans light";
     font-size: 1.5rem;
     line-height: 2.25rem;
     background: linear-gradient(-165deg, #000000 0%, #A1A3A1 100%);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    margin-top: 30px;
+    margin-top: 20px;
     font-weight: 600;
     width: 80%;}
 
@@ -1200,6 +1200,26 @@ margin-top: 0px;}
     display: flex;
     flex-direction: row;
     gap: 20px;}
+
+#testimonial-boxes-top-row,
+#testimonial-boxes-bottom-row {
+  transition: transform 0.05s linear;
+  will-change: transform;
+}
+
+#testimonial-boxes-top-row {
+    transform: translateX(50px); /* starts fully left */
+  }
+  
+  #testimonial-boxes-bottom-row {
+    transform: translateX(50px); /* adjust this for how far right it starts */
+  }
+
+
+
+
+
+
 
 #testimonial-boxes-top-left-row, #testimonial-boxes-top-right-row, #testimonial-boxes-bottom-left-row, #testimonial-boxes-bottom-right-row{
     display: flex;
@@ -1502,6 +1522,7 @@ padding-top: 2px;}
     border: 1px solid #4F7CAF;
     background-color: #ffffff;
     color: #4F7CAF;
+    box-shadow: 6px 6px 12px #33557b, -6px -6px 12px #4F7CAF;
     font-family: "general sans semi-bold";
     gap: 10px;
     margin-top: 25px;
@@ -1918,8 +1939,8 @@ align-items: flex-end;}
     width: 100%;}
     
 #nineth-section-center-right-text{
-    font-size: 2rem;
-    line-height: 3rem;
+    font-size: 1.5rem;
+    line-height: 2.25rem;
     margin-top: 0px;
     width: 100%;}
 
@@ -2531,13 +2552,13 @@ width: 125%;}
 #nav-right{
     margin-right: 20px;}
 
-    #hero-section-center-left{
-        margin-left: 20px;
-        margin-right: 20px;
-        justify-content: flex-start;
-        margin-top: 100px;
-        margin-right: 0px;
-        width: 300px;}
+#hero-section-center-left{
+    margin-left: 20px;
+    margin-right: 20px;
+    justify-content: flex-start;
+    margin-top: 100px;
+    margin-right: 0px;
+    width: 300px;}
 
 #buttons-hero-section-mobile{
     margin-top: 300px;
@@ -2746,10 +2767,9 @@ footer{
 }
 
 @media screen and (max-width: 361px) {
-    #hero-section-center-right > img {
-        width: 300px;
-        transform: translateX(100px);
-    }
+#hero-section-center-right > img {
+    width: 300px;
+    transform: translateX(100px);}
 }
           
 @media screen and (max-width: 345px) {
