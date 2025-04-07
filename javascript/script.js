@@ -739,3 +739,23 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 */
+
+
+
+
+const topRow = document.getElementById("testimonial-boxes-top-row");
+const bottomRow = document.getElementById("testimonial-boxes-bottom-row");
+
+window.addEventListener("scroll", () => {
+    const scrollY = window.scrollY;
+
+    const container = document.getElementById("testimonial-boxes");
+    const rect = container.getBoundingClientRect();
+
+    if (rect.top < window.innerHeight && rect.bottom > 0) {
+        const moveX = (scrollY - container.offsetTop) * 0.1; // ← bumped up from 0.2 to 0.4
+
+        topRow.style.transform = `translateX(${moveX - 800}px)`;
+        bottomRow.style.transform = `translateX(${-moveX + 800}px)`; // starts further right
+    }
+});
